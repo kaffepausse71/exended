@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon id="repository.exended.repo" name="[COLOR blue]Confluence Exended 2.0 Repository[/COLOR]" version="1.0.0" provider-name="Loki1979,SKINBASE">
-	<extension point="xbmc.addon.repository" name="Test Repository">
-		<info compressed="false">http://xxx/new_repo/addons.xml</info>
-		<checksum>http://xxx/new_repo/addons.xml.md5</checksum>
-		<datadir zip="true">http://xxx/new_repo/</datadir>
+	<extension point="xbmc.addon.repository" name="Confluence Exended 2.0 Repository">
+		<info compressed="false">https://raw.githubusercontent.com/kaffepausse71/exended/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/kaffepausse71/exended/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/kaffepausse71/exended</datadir>
 	</extension>
     <extension point="xbmc.addon.metadata">
 	<summary></summary>
@@ -484,6 +484,24 @@
     </extension>
 </addon>
 
+<addon id="script.module.simplecache" name="Simple Cache Module" version="1.0.20" provider-name="sualfred">
+    <requires>
+        <import addon="xbmc.python" version="2.26.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Provides a simple file- and memory based cache for Kodi addons</summary>
+        <description lang="en_GB">Provides a simple file- and memory based cache for Kodi addons. Based on the original work of Marcelveldt.</description>
+        <platform>all</platform>
+        <license>Apache 2.0</license>
+        <forum/>
+        <source>https://github.com/sualfred/script.module.simplecache</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="script.module.simplejson"
        name="simplejson"
        version="3.16.1"
@@ -568,6 +586,51 @@
             <icon>icon.png</icon>
         </assets>
     </extension>
+</addon>
+
+<addon id="script.simpleplaylists"
+       name="SimplePlaylists"
+       version="1.1.1"
+       provider-name="AddonScriptorDE">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+    <provides>video audio image</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+      <summary lang="en">Add local media (video/audio/images) and add-on content to playlists while browsing/watching your media. To use this addon you have to map the following command to a key: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". More Info: forum.xbmc.org</summary>
+      <summary lang="de">Lokale Medien (Videos/Musik/Bilder) und Add-on Inhalte beim Durchsuchen/Abspielen zu Playlisten hinzufügen. Um das Addon nutzen zu können muss folgender Befehl einer Taste zugewiesen werden: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". Mehr Infos: xbmcnerds.com, forum.xbmc.org</summary>
+      <language></language>
+      <description lang="en">Add local media (video/audio/images) and add-on content to playlists while browsing/watching your media. To use this addon you have to map the following command to a key: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". More Info: forum.xbmc.org</description>
+      <description lang="de">Lokale Medien (Videos/Musik/Bilder) und Add-on Inhalte beim Durchsuchen/Abspielen zu Playlisten hinzufügen. Um das Addon nutzen zu können muss folgender Befehl einer Taste zugewiesen werden: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". Mehr Infos: xbmcnerds.com, forum.xbmc.org</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.34" provider-name="marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+        <import addon="script.module.simplecache" version="1.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.0"/>
+	</requires>
+
+    <extension point="xbmc.python.library" library="default.py" />
+    <extension point="xbmc.service" library="service.py" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins providing rotating backgrounds</summary>
+        <description>Helper service for Kodi skins providing rotating backgrounds</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/cartmandos/script.skin.helper.backgrounds</source>
+	</extension>
 </addon>
 
 <addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.0.18" provider-name="BigNoid,marcelveldt">
